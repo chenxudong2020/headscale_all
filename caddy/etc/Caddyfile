@@ -7,5 +7,5 @@
 }
 
 :80 {
-	reverse_proxy / 127.0.0.1:4567
+	reverse_proxy / [vps的IP]:4567
 }

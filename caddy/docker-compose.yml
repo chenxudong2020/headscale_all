@@ -3,8 +3,7 @@ services:
     build: .
     container_name: caddy
     restart: always  
-    networks:
-      - headscale
+    networks: headscale
     ports:
       - 80:80
       - 443:443
