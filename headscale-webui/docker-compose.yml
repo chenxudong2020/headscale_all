@@ -1,0 +1,13 @@
+services:
+  headscale-webui:
+    image: jmal/headscale-webui
+    container_name: headscale-webui
+    restart: always  
+    network_mode: bridge
+    networks:
+      - headscale
+    ports:
+      - 4567:80
+    environment:
+      - VITE_APP_NAME=Headscale WebUI
+      - VITE_DEFAULT_LANG=zh_CN

@@ -1,0 +1,16 @@
+services:
+  caddy:
+    image: abiosoft/caddy
+    container_name: caddy
+    restart: always  
+    network_mode: bridge
+    networks:
+      - headscale
+    ports:
+      - 80:80
+      - 443:443
+    volumes:  
+      - ./etc/Caddyfile:/etc/Caddyfile
+      - ./caddycerts:/etc/caddycerts
+    environment:
+      - CADDYPATH=/etc/caddycerts

@@ -1,9 +1,11 @@
 services:  
   headscale:  
-    image: headscale/headscale:0.25.1
+    image: headscale/headscale:0.25.0
     container_name: headscale
     restart: always  
     network_mode: bridge
+    networks:
+      - headscale
     ports:  
       - "8080:8080"  
       - "9090:9090"  

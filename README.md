@@ -1,2 +1,4 @@
 # headscale_all
-headscale+headscale_ui 一键仓库
+headscale+headscale_ui+caddy 一键仓库
+
+# 安装步骤
