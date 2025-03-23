@@ -11,7 +11,7 @@ services:
     volumes:  
       - ./config:/etc/headscale
       - ./data:/var/lib/headscale
-    command: ["headscale", "serve"] 
+    command: ["serve"] 
     environment:
       - TZ=Asia/Shanghai
 networks:
