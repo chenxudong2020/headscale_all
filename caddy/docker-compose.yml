@@ -1,6 +1,6 @@
 services:
   caddy:
-    image: caddy:2.7.6
+    build: .
     container_name: caddy
     restart: always  
     networks:
