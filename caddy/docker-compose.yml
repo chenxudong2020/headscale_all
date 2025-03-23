@@ -1,6 +1,6 @@
 services:
   caddy:
-    image: abiosoft/caddy
+    image: caddy:2.7.6
     container_name: caddy
     restart: always  
     networks:
@@ -10,9 +10,8 @@ services:
       - 443:443
     volumes:  
       - ./etc/Caddyfile:/etc/Caddyfile
-      - ./caddycerts:/etc/caddycerts
-    environment:
-      - CADDYPATH=/etc/caddycerts
+      - ./caddy_data:/data
+      - ./caddy_config:/config
 networks:
   headscale:
     driver: bridge      
