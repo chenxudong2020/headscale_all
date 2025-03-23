@@ -1,6 +1,6 @@
 services:  
   headscale:  
-    image: headscale/headscale:0.25.0
+    image: headscale/headscale:0.22.3
     container_name: headscale
     restart: always  
     networks:
@@ -14,3 +14,6 @@ services:
     command: ["headscale", "serve"] 
     environment:
       - TZ=Asia/Shanghai
+networks:
+  headscale:
+    driver: bridge      

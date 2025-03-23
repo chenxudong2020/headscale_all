@@ -13,3 +13,6 @@ services:
       - ./caddycerts:/etc/caddycerts
     environment:
       - CADDYPATH=/etc/caddycerts
+networks:
+  headscale:
+    driver: bridge      

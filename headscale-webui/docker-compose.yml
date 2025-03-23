@@ -10,3 +10,6 @@ services:
     environment:
       - VITE_APP_NAME=Headscale WebUI
       - VITE_DEFAULT_LANG=zh_CN
+networks:
+  headscale:
+    driver: bridge      
