@@ -3,7 +3,6 @@ services:
     image: headscale/headscale:0.25.0
     container_name: headscale
     restart: always  
-    network_mode: bridge
     networks:
       - headscale
     ports:  

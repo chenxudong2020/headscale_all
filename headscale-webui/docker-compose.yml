@@ -3,7 +3,6 @@ services:
     image: jmal/headscale-webui
     container_name: headscale-webui
     restart: always  
-    network_mode: bridge
     networks:
       - headscale
     ports:

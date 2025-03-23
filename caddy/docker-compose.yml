@@ -3,7 +3,6 @@ services:
     image: abiosoft/caddy
     container_name: caddy
     restart: always  
-    network_mode: bridge
     networks:
       - headscale
     ports:
