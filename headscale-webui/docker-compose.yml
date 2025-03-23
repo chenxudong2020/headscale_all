@@ -1,15 +1,18 @@
 services:
-  headscale-webui:
-    image: jmal/headscale-webui
-    container_name: headscale-webui
+  headscale-admin:
+    image: headscale-admin:latest
+    container_name: headscale-admin
     restart: always  
+    ports:
+      - "4567:8080"
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - HEADSCALE_API_URL=http://headscale:8080
+      - HEADSCALE_API_KEY=your_api_key_here
     networks:
       - headscale
-    ports:
-      - 4567:80
-    environment:
-      - VITE_APP_NAME=Headscale WebUI
-      - VITE_DEFAULT_LANG=zh_CN
+
 networks:
   headscale:
     driver: bridge      
