@@ -17,7 +17,7 @@ www.{主域名} {
         file_server
     }
 
-     reverse_proxy xy.czc.cloudns.biz:4567 {
+     reverse_proxy {VPS的IP}:4567 {
             transport http {
                 versions h11 h2
             }
@@ -44,7 +44,7 @@ tailscale.{主域名} {
         file_server
     }
 	
-    reverse_proxy xy.czc.cloudns.biz:8080 {
+    reverse_proxy {VPS的IP}:8080 {
             transport http {
                 versions h11 h2
             }
