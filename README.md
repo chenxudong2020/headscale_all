@@ -14,6 +14,8 @@ yum update && yum install git curl -y
 2. 安装docker </br>
    ```
    curl -fsSL https://get.docker.com |bash
+   service docker start
+   systemctl enable docker
    ```
 3. 安装docker-compose </br>
    ```
